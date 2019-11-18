@@ -7,7 +7,7 @@ get '/' do
         HTML
     else
         <<-HTML
-            <h1>"hola #{params[:nombre]}"</h1>
+            <h1>"hola #{params[:nombre]}!"</h1>
         HTML
         
     end
