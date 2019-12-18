@@ -12,5 +12,5 @@ end
 
 get '/makers/:nombre' do
     @nombre = params[:nombre].capitalize
-    "<h1>hola #{@nombre}</h1>"
+    "<h1>hola #{@nombre}!</h1>"
 end
