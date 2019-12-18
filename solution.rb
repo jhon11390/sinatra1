@@ -9,3 +9,8 @@ get '/' do
         "<h1>Hola desconocido!</h1>"
     end
 end
+
+get '/makers/:nombre' do
+    @nombre = params[:nombre].capitalize
+    "<h1>hola #{@nombre}</h1>"
+end
