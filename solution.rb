@@ -12,7 +12,7 @@ get '/' do
     end
 end
 
-get '/:nombre' do
+get '/makers/:nombre' do
     @nombre = params[:nombre].capitalize
     if @nombre.length > 0
         "<h1>Hola #{@nombre}!</h1>"
