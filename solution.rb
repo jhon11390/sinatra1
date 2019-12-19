@@ -1,10 +1,12 @@
 require 'sinatra'
 
 get '/' do
-    if params[:nombre].length > 0
-        "<h1>Hola #{params[:nombre]}!</h1>"
-    elsif params[:nombre].length == 0
-        "<h1>Hola desconocido!</h1>"
+    if params[:nombre].length
+        if params[:nombre].length > 0
+            "<h1>Hola #{params[:nombre]}!</h1>"
+        else
+            "<h1>Hola desconocido!</h1>"
+        end
     else
         "<h1>Hola desconocido!</h1>"
     end
