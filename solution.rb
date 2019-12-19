@@ -12,18 +12,10 @@ get '/' do
     end
 end
 
-get "/makers" do
-    "<h1>Hola desconocido!</h1>"
-end
-
-get "/makers/" do
-    "<h1>Hola desconocido!</h1>"
-end
-
-get '/makers/:nombre' do
+get '/:nombre' do
     @nombre = params[:nombre].capitalize
     if @nombre.length > 0
-        "<h1>hola #{@nombre}!</h1>"
+        "<h1>Hola #{@nombre}!</h1>"
     elsif @nombre.length == 0
         "<h1>Hola desconocido!</h1>"
     end
